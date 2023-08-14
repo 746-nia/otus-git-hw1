@@ -48,7 +48,7 @@ public class Box {
         System.out.println("Характеристики коробки: длина - " + length + ", ширина - " + width + ", высота - " + height + ", цвет - " + color);
     }
 
-    public void putObj(String obj) {
+    public void interactObj(String obj) {
         if(stateOpen){
             if(content == null){
                 System.out.println("Коробка заполнена. В ней ноходится предмет " + obj);
@@ -57,7 +57,7 @@ public class Box {
             }else {
                 if(content.equals(obj)){
                     System.out.println("Коробка пуста. Предмет " + obj + " вытащен из коробки.");
-                    content = "";
+                    content = null;
                 } else System.out.println("Сначала нужно поместить предмет " + obj + " в коробку. Для этого вытащите из коробки предмет " + content);
 
             }

@@ -28,9 +28,9 @@ public class Main {
         box.close();
         box.open();
         String obj = "pen";
-        box.putObj(obj);
+        box.interactObj(obj);
         String objN = "pensil";
-        box.putObj(objN);
+        box.interactObj(objN);
 
     }
 }
