@@ -2,11 +2,11 @@ package ru.otus.nikolaeva.homework3;
 
 public class Main {
     public static void main(String[] args) {
-        sumofPosititiveElements(new int[][] {{1,1,5}, {-10,4,-3}});
+//        sumofPosititiveElements(new int[][] {{1,1,5}, {-10,4,-3}});
         drawSquare(4);
-        nullDiagonalsOfArray(new int[][] {{1,1,5}, {10,4,-3}, {10,4,3}});
-        findMax(new int[][] {{1,1,5}, {-10,4,-3}});
-        sumofSecondRowsofArray(new int[][] {{1,1,5}, {-10,4,-3}, {-10,4,-3}});
+//        nullDiagonalsOfArray(new int[][] {{1,1,5}, {10,4,-3}, {10,4,3}});
+//        findMax(new int[][] {{1,1,5}, {-10,4,-3}});
+//        sumofSecondRowsofArray(new int[][] {{1,1,5}, {-10,4,-3}, {-10,4,-3}});
 
     }
 
@@ -24,18 +24,14 @@ public class Main {
     }
 
     public static void drawSquare( int size){
-        char [][] array = new char [size][size];
-        for (int i = 0; i < size ; i ++) {
+       for (int i = 0; i < size ; i ++) {
             for (int j = 0; j < size; j++) {
-                array[i][j] = '*';
+                System.out.print('*');
             }
+           System.out.println();
         }
-        for (int i = 0; i < size ; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print (array[i][j]+ " ");
-            }
-            System.out.println();
-        }
+        System.out.println();
+
     }
 
     public static void nullDiagonalsOfArray(int[][] arr) {
@@ -69,7 +65,7 @@ public class Main {
 
     public static int sumofSecondRowsofArray(int[][]array) {
         int sum = 0;
-        if (array.length !=1) {
+        if (array.length > 1) {
             for (int i = 0; i < array[1].length; i++) {
                 sum += array[1][i];
             }
