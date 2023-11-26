@@ -10,6 +10,7 @@ public class Rover extends AbstractTransport implements Transport{
     @Override
     public boolean move(int distance, TypeOfLocality locality) {
         float toplivoForDistance = 0.9f*distance;
+
         if(toplivoForDistance > benzin) {
             System.out.println("Бензина в вездеходе не хватит.");
             return false;

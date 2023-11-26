@@ -25,8 +25,7 @@ public class Human {
     public void setCurrenttransport(AbstractTransport currenttransport) {
         if(currenttransport == null) {
             System.out.println("Транспорт не выборан");
-        } else {
-            System.out.println(name + " находится в транспорте " + currenttransport.getClass().getSimpleName());
+        } else {System.out.println(name + " находится в транспорте " + currenttransport.getClass().getSimpleName());
             currenttransport.setDriver(this);
         }
         this.currenttransport = currenttransport;

@@ -10,6 +10,7 @@ public class Horse extends AbstractTransport implements Transport{
     @Override
     public boolean move(int distance, TypeOfLocality locality) {
         int enduranceForDistance = 4*distance;
+
         if((locality.equals(TypeOfLocality.SWAMP))){
             System.out.println("Лошадь по данной местности " + locality + " не едет.");
             return false;
