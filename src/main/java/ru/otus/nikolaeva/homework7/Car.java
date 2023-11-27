@@ -11,6 +11,7 @@ public class Car extends AbstractTransport implements Transport{
     @Override
     public boolean move(int distance, TypeOfLocality locality) {
         float toplivoForDistance = 0.7f*distance;
+
         if((locality.equals(TypeOfLocality.FOREST)) ||(locality.equals(TypeOfLocality.SWAMP)) ){
             System.out.println("Машина по данной местности " + locality + " не едет.");
             return false;

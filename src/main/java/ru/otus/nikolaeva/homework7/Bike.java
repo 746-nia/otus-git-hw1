@@ -5,6 +5,7 @@ public class Bike extends AbstractTransport implements Transport{
     public boolean move(int distance, TypeOfLocality locality){
         int enduranceForDistance = 2*distance;
         int endurance = getDriver().getEnduranceHuman();
+
         if((locality.equals(TypeOfLocality.SWAMP))){
             System.out.println("Велосипед по данной местности " + locality + " не едет.");
         return false;
