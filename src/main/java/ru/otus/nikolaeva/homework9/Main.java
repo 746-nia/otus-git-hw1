@@ -28,13 +28,13 @@ public class Main {
 
     }
 
-    public static ArrayList<Integer> createArrayList(int min, int max){
-        ArrayList<Integer> arrayList = new ArrayList<>();
+    public static ArrayList<List> createArrayList(int min, int max){
+        ArrayList<List> arrayList = new ArrayList<>();
         while(min != max){
-            arrayList.add(min);
+            arrayList.add(Collections.singletonList(min));
             min += 1;
         }
-        arrayList.add(max);
+        arrayList.add(Collections.singletonList(max));
         System.out.println(arrayList);
         return arrayList;
     }
@@ -51,7 +51,7 @@ public class Main {
 
     public static ArrayList<Integer> listChangeElement( int el, ArrayList<Integer> arr){
         for (int i = 0; i < arr.size(); i++) {
-            Collections.replaceAll(arr, arr.get(i), el);
+            arr.set(i,el);
         }
         System.out.println(arr);
         return arr;
@@ -59,7 +59,7 @@ public class Main {
 
     public static ArrayList<Integer> listIncreaseElementForNumber( int num, ArrayList<Integer> arr) {
         for (int i = 0; i <arr.size() ; i++) {
-            Collections.replaceAll(arr, arr.get(i), (arr.get(i) + num));
+            arr.set(i, (arr.get(i) + num));
         }
         System.out.println(arr);
         return arr;

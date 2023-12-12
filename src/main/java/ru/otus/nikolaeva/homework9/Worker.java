@@ -30,11 +30,11 @@ public class Worker {
         return nameList;
     }
 
-    public List<Object> listAgeOfWorker(List<Worker> list, int minAge) {
-        List<Object> workerListWithAgeIncreaseMin = new ArrayList<>();
+    public ArrayList<String> listAgeOfWorker(List<Worker> list, int minAge) {
+        ArrayList<String> workerListWithAgeIncreaseMin = new ArrayList<>();
         for (Worker worker:list) {
             if(worker.getAge() >= minAge){
-                workerListWithAgeIncreaseMin.add("{ " + worker.getName() + " - " + worker.getAge() + " }");
+                workerListWithAgeIncreaseMin.add(worker.getName());
             }
         }
         System.out.println(workerListWithAgeIncreaseMin);
@@ -70,18 +70,14 @@ public class Worker {
         return workerListWithAgeIncreaseMax;
     }
 
-    public List<Object> listWorkerWithMinAge(List<Worker> list) {
-        List<Object> workerListWithAgeIncreaseMin = new ArrayList<>();
-        int min = 10000;
+    public String listWorkerWithMinAge(List<Worker> list) {
+        int min = Integer.MAX_VALUE;
         for(Worker worker: list){
             if(worker.getAge() <= min){
                 min = worker.getAge();
                 name = worker.getName();
             }
         }
-        workerListWithAgeIncreaseMin.add(min);
-        workerListWithAgeIncreaseMin.add(name);
-        System.out.println(workerListWithAgeIncreaseMin);
-        return workerListWithAgeIncreaseMin;
+        return name;
     }
 }
