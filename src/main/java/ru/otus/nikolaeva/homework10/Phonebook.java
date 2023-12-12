@@ -23,18 +23,10 @@ public class Phonebook {
         return listPhone;
     }
 
-     public String containsPhoneNumber (String phone) {
-        String res ="-";
-         for (Map.Entry<String, String> key : phoneBookMap.entrySet()) {
-             if ((key.getKey()).equals(phone)) {
-                 res = "Номер телефона есть в справочнике владелец " + key.getValue() ;
-//                 System.out.println("Номер телефона есть в справочнике");
-             } else {
-                 res = "Номер телефона отсутсвует в справочнике";
-             }
-         }
-         System.out.println(res);
-         return res;
+     public boolean containsPhoneNumber (String phone) {
+        boolean hasKey = phoneBookMap.containsKey(phone);
+         System.out.println(hasKey);
+         return hasKey;
      }
 
 }
